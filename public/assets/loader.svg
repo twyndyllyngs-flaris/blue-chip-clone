@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66" width="66" height="66" class="animate-spin">
+  <defs>
+    <clipPath id="__lottie_element_26">
+      <rect width="66" height="66" x="0" y="0"></rect>
+    </clipPath>
+  </defs>
+  <g clipPath="url(#__lottie_element_26)">
+    <g transform="matrix(1,0,0,1,33,33)" opacity="1">
+      <g transform="matrix(2,0,0,2,0,0)">
+        <path strokeLinecap="butt" strokeLinejoin="miter" fillOpacity="0" strokeMiterlimit="4" stroke="rgb(255,255,255)" strokeOpacity="0.11" strokeWidth="4" d="M0,-14.5 C8.00255012512207,-14.5 14.5,-8.00255012512207 14.5,0 C14.5,8.00255012512207 8.00255012512207,14.5 0,14.5 C-8.00255012512207,14.5 -14.5,8.00255012512207 -14.5,0 C-14.5,-8.00255012512207 -8.00255012512207,-14.5 0,-14.5z"></path>
+      </g>
+    </g>
+    <g transform="matrix(0.9030668139457703,0.42950013279914856,-0.42950013279914856,0.9030668139457703,33,33)" opacity="1">
+      <g transform="matrix(2,0,0,2,0,0)">
+        <path strokeLinecap="butt" strokeLinejoin="miter" fillOpacity="0" strokeMiterlimit="4" strokeDasharray="84" strokeDashoffset="100" stroke="rgb(255,255,255)" strokeOpacity="1" strokeWidth="4" d="M0,-14.5 C-8.00255012512207,-14.5 -14.5,-8.00255012512207 -14.5,0 C-14.5,8.00255012512207 -8.00255012512207,14.5 0,14.5 C8.00255012512207,14.5 14.5,8.00255012512207 14.5,0 C14.5,-8.00255012512207 8.00255012512207,-14.5 0,-14.5z"></path>
+      </g>
+    </g>
+  </g>
+</svg>

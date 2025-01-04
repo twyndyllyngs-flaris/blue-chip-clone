@@ -20,6 +20,9 @@ export default {
       boxShadow: {
         'bottom-primary': '0 9px 35px rgba(3, 25, 58, 0.4)',
       },
+      backgroundImage: {
+        'violet-gradient': 'linear-gradient(180deg, #7b61ff, #8337ff 102.09%)',
+      },
     },
   },
   plugins: [],

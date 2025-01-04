@@ -10,8 +10,11 @@ import SearchDrawer from './SearchDrawer'
 
 const Navbar = () => {
   return (
-    <nav className='shadow-bottom-primary bg-theme-primary w-full h-[60px] px-[15px] py-[10px] md:pb-[15px] lg:px-[22px] lg:py-[8px] xl:px-[30px]
-     2xl:px-[40px] flex items-center justify-between z-[99999] relative border-b border-white border-opacity-5'>
+    <nav 
+      role="navigation" 
+      aria-label="Main navigation"
+      className='shadow-bottom-primary bg-theme-primary w-full h-[60px] px-[15px] py-[10px] md:pb-[15px] lg:px-[22px] lg:py-[8px] xl:px-[30px] 2xl:px-[40px] flex items-center justify-between z-[99999] relative border-b border-white border-opacity-5'
+    >
       {/* left side - menu, nav, logo */}
       <div className='flex items-center gap-2'>
         <DrawerButton />
@@ -19,7 +22,7 @@ const Navbar = () => {
         <div className='relative w-[38px] h-[30px]'>
           <Image
             src='/assets/main-logo-light.svg'
-            alt='Description of the image'
+            alt='Logo of the website'
             layout='fill'
             objectFit='cover'
             className='rounded-lg'
@@ -27,7 +30,7 @@ const Navbar = () => {
         </div>
 
         <SearchButton />
-    
+
         <NavbarLinks />
       </div>
 
@@ -37,15 +40,15 @@ const Navbar = () => {
           text='Login'
           backgroundColor='bg-button-primary'
           linkTo='/'
+          aria-label='Login button'
         />
         <NavBarButtons
           text='Registration'
           backgroundColor='bg-button-secondary'
           linkTo='/'
+          aria-label='Registration button'
         />
       </div>
-
-     
     </nav>
   )
 }

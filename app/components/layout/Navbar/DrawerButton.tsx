@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react'
 
-//components
+// components
 import Drawer from './Drawer'
+import Overlay from '@/components/ui/Overlay'
 
 const DrawerButton = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
@@ -15,6 +16,8 @@ const DrawerButton = () => {
   return (
     <div className='flex items-center'>
       <button
+        aria-label='Toggle drawer menu'
+        aria-expanded={isDrawerOpen ? 'true' : 'false'}
         className='font-normal w-[30px] h-[30px] md:w-[35px] md:h-[35px] lg:w-[42px] lg:h-[42px] scale-100 hover:scale-[110%] transform transition-all duration-150 active:scale-95'
         onClick={toggleDrawer}
       >
@@ -52,6 +55,7 @@ const DrawerButton = () => {
         </svg>
       </button>
 
+      {isDrawerOpen && <Overlay />}
       <Drawer closeDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} />
     </div>
   )
