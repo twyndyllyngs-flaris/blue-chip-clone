@@ -6,14 +6,17 @@ import NavBarButtons from './NavBarButtons'
 import DrawerButton from './DrawerButton'
 import SearchButton from './SearchButton'
 import NavbarLinks from './NavbarLinks'
-import SearchDrawer from './SearchDrawer'
 
 const Navbar = () => {
   return (
     <nav 
       role="navigation" 
       aria-label="Main navigation"
-      className='shadow-bottom-primary bg-theme-primary w-full h-[60px] px-[15px] py-[10px] md:pb-[15px] lg:px-[22px] lg:py-[8px] xl:px-[30px] 2xl:px-[40px] flex items-center justify-between z-[99999] relative border-b border-white border-opacity-5'
+      className='shadow-bottom-primary bg-theme-primary w-full h-[64px] px-[15px] py-[10px] 
+      md:pb-[15px] 
+      lg:px-[22px] lg:py-[8px] 
+      xl:px-[30px] 
+      2xl:px-[104px] 2xl:py-[14px] flex items-center justify-between z-[99999] relative border-b border-white border-opacity-5'
     >
       {/* left side - menu, nav, logo */}
       <div className='flex items-center gap-2'>

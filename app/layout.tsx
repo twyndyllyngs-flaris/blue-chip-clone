@@ -66,9 +66,11 @@ export default function RootLayout ({
           <SearchDrawer></SearchDrawer>
         </header>
 
-        <main className='bg-gray-100'>{children}</main>
+        <main className='bg-gray-100 w-full h-fit pt-[64px]'>{children}</main>
 
-        <footer className='bg-theme-primary w-full h-[1500px] flex justify-center items-center'>footer</footer>
+        <footer className='bg-theme-primary w-full h-[1500px] flex justify-center items-center'>
+          footer
+        </footer>
       </body>
     </html>
   )

@@ -9,7 +9,7 @@ const SearchButton = () => {
         md:w-[25px] md:h-[25px] 
         lg:w-[27px] lg:h-[27px] lg:ml-[40px] lg:mr-[24px] 
         xl:w-[30px] xl:h-[30px] 
-        2xl:ml-[80px] scale-100 hover:scale-[110%] transition-all hidden duration-150 active:scale-95 active:opacity-80'
+        2xl:ml-[40px] scale-100 hover:scale-[110%] transition-all hidden duration-150 active:scale-95 active:opacity-80'
       >
         <svg
           width='100%'
