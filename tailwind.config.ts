@@ -23,6 +23,11 @@ export default {
       backgroundImage: {
         'violet-gradient': 'linear-gradient(180deg, #7b61ff, #8337ff 102.09%)',
       },
+      screens: {
+        'xsm': '520px',
+        '2xsm': '480px',
+        '3xsm': '360px',
+      },
     },
   },
   plugins: [],

@@ -53,7 +53,7 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
           >
             <Image
               src='/assets/drawer-promo.svg'
-              alt='bluechip casino: play for real money | welcome bonus up to 500% - d-promo_button_20240207105834_0'
+              alt='promo button'
               layout='fill'
               objectFit='cover'
               className='absolute inset-0 text-transparent'
@@ -66,7 +66,7 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
           >
             <Image
               src='/assets/drawer-deposit.png'
-              alt='bluechip casino: play for real money | welcome bonus up to 500% - d-promo_button_20240207105834_0'
+              alt='deposit button'
               layout='fill'
               objectFit='cover'
               className='absolute inset-0 text-transparent'
@@ -118,12 +118,15 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
 
       <footer>
         {/* help center and live support button */}
-        <div className='grid grid-cols-2 gap-[15px] mb-[20px]'>
-          <button className='flex items-center justify-center gap-2 bg-violet-gradient text-white uppercase rounded-[10px] transition-all duration-[.2s] ease-in-out h-[45px]'>
-            <span>
+        <div className='grid grid-cols-2 gap-[15px] mb-[10px] 2xsm:mb-[20px]'>
+          <button
+            className='flex items-center justify-center gap-2 bg-violet-gradient text-white uppercase rounded-[10px]  ease-in-out h-[45px]
+          hover:opacity-80 transform transition-all duration-150 active:scale-95 p-[10px] 3xsm:p-[0]'
+          >
+            <span className='w-[20px] h-[20px] 3xsm:w-[25px] 3xsm:h-[25px] 2xsm:w-[29px] 2xsm:h-[29px]'>
               <svg
-                width='24px'
-                height='24px'
+                width='100%'
+                height='100%'
                 viewBox='0 0 24 24'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
@@ -164,18 +167,21 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
                 </g>
               </svg>
             </span>
-            <span className='font-medium text-[13px] leading-[140%]'>
+            <span className='font-medium text-[10px] 3xsm:text-[12px] 2xsm:text-[13px] leading-[140%]'>
               Help Center
             </span>
           </button>
 
-          <button className='flex items-center justify-center gap-2 bg-violet-gradient text-white uppercase rounded-[10px] transition-all duration-[.2s] ease-in-out h-[45px]'>
-            <span>
+          <button
+            className='flex items-center justify-center gap-2 bg-violet-gradient text-white uppercase rounded-[10px] ease-in-out h-[45px]
+          hover:opacity-80 transform transition-all duration-150 active:scale-95 p-[10px] 3xsm:p-[0]'
+          >
+            <span className='w-[20px] h-[20px] 3xsm:w-[25px] 3xsm:h-[25px] 2xsm:w-[29px] 2xsm:h-[29px]'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 66 66'
-                width='24'
-                height='24'
+                width='100%'
+                height='100%'
                 className='animate-spin'
               >
                 <defs>
@@ -220,14 +226,15 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
                 </g>
               </svg>
             </span>
-            <span className='font-medium text-[13px] leading-[140%]'>
+            <span className='font-medium text-[10px] 3xsm:text-[12px] 2xsm:text-[13px] leading-[140%]'>
               Live Support
             </span>
           </button>
         </div>
 
         {/* add to your home screen */}
-        <button className='w-full relative grid grid-cols-[1fr_6fr] gap-[15px] items-center mb-[75px] p-[10px] bg-[#1a3157] rounded-[12px] transition-all duration-[.2s] ease-in-out'>
+        <button className='w-full relative grid grid-cols-[1fr_6fr] gap-[15px] items-center mb-[75px] p-[10px] bg-[#1a3157] hover:bg-[#4d668f] rounded-[12px] 
+         ease-in-out active:opacity-80 transform transition-all duration-150 active:scale-95'>
           <div className='relative w-[41px] h-[41px]'>
             <Image
               src='/assets/favicon.webp'
@@ -237,7 +244,7 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
               className='rounded-lg'
             />
           </div>
-          <div className='text-left'>
+          <div className='text-center 3xsm:text-left'>
             <p className='font-medium text-[15px] leading-[140%]'>
               Bluechip App
             </p>
@@ -245,7 +252,7 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
               Add to your Home Screen
             </p>
           </div>
-          <div className='font-medium absolute right-[17px]'>►</div>
+          <div className='font-medium absolute right-[17px] hidden 3xsm:block'>►</div>
         </button>
 
         {/* follow us socials */}
@@ -254,10 +261,10 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
             Follow Us
           </p>
 
-          <div className='px-[15px] flex items-center justify-between w-full'>
+          <div className='p-0 3xsm:px-[15px] flex items-center justify-between w-full'>
             <Link
               href={'/'}
-              className='w-[30px] h-[30px] relative inline-block transition-all duration-[.2s] ease-in-out'
+              className='w-[30px] h-[30px] relative inline-block ease-in-out hover:scale-[110%] transform transition-all duration-150 active:scale-95 active:opacity-80'
             >
               <Image
                 src='/assets/telegram.svg'
@@ -269,7 +276,7 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
             </Link>
             <Link
               href={'/'}
-              className='w-[30px] h-[30px] relative inline-block transition-all duration-[.2s] ease-in-out'
+              className='w-[30px] h-[30px] relative inline-block ease-in-out hover:scale-[110%] transform transition-all duration-150 active:scale-95 active:opacity-80'
             >
               <Image
                 src='/assets/fb.svg'
@@ -281,7 +288,7 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
             </Link>
             <Link
               href={'/'}
-              className='w-[30px] h-[30px] relative inline-block transition-all duration-[.2s] ease-in-out'
+              className='w-[30px] h-[30px] relative inline-block ease-in-out hover:scale-[110%] transform transition-all duration-150 active:scale-95 active:opacity-80'
             >
               <Image
                 src='/assets/ig.svg'
@@ -293,7 +300,7 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
             </Link>
             <Link
               href={'/'}
-              className='w-[30px] h-[30px] relative inline-block transition-all duration-[.2s] ease-in-out'
+              className='w-[30px] h-[30px] relative inline-block ease-in-out hover:scale-[110%] transform transition-all duration-150 active:scale-95 active:opacity-80'
             >
               <Image
                 src='/assets/twitter.svg'
