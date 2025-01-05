@@ -1,25 +1,19 @@
 import { GraphQLClient } from 'graphql-request'
 
-const HYGRAPH_API = process.env.HYGRAPH_API as string // Add this to your .env.local
+const HYGRAPH_API = process.env.HYGRAPH_API as string // Make sure this is set in your .env.local
+const HYGRAPH_TOKEN = process.env.HYGRAPH_TOKEN as string // Optional: if you have private API access
+
+import { GameCardData, ProviderCardData } from '@/types/interfaces'
 
 export const hygraph = new GraphQLClient(HYGRAPH_API, {
   headers: {
-    Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}` // Optional: if you have private API access
+    Authorization: `Bearer ${HYGRAPH_TOKEN}` // Optional: if you have private API access
   }
 })
 
-type GameCard = {
-  id: string
-  isDiscounted: boolean
-  isHot: boolean
-  title: string
-  gamePoster: {
-    url: string
-  }
-}
-
+// Fetch Game Cards Data
 type GameCardsResponse = {
-  gamesCards: GameCard[]
+  gamesCards: GameCardData[]
 }
 
 async function fetchGameCards (): Promise<GameCardsResponse> {
@@ -42,7 +36,28 @@ async function fetchGameCards (): Promise<GameCardsResponse> {
       }
     }
   `
-  return hygraph.request<GameCardsResponse>(query) // Specify the return type here
+  return hygraph.request<GameCardsResponse>(query)
 }
 
-export { fetchGameCards }
+// Fetch Providers Data
+type ProviderCardsResponse = {
+  providers: ProviderCardData[]
+}
+
+async function fetchProviders (): Promise<ProviderCardsResponse> {
+  const query = `
+    {
+      providers {
+        id
+        providerName
+        numberOfGames
+        providerLogo {
+          url
+        }
+      }
+    }
+  `
+  return hygraph.request<ProviderCardsResponse>(query)
+}
+
+export { fetchGameCards, fetchProviders }
