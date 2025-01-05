@@ -16,7 +16,7 @@ const Navbar = () => {
       md:pb-[15px] 
       lg:px-[22px] lg:py-[8px] 
       xl:px-[30px] 
-      2xl:px-[104px] 2xl:py-[14px] flex items-center justify-between z-[99999] relative border-b border-white border-opacity-5'
+      2xl:px-[104px] 2xl:py-[14px] flex items-center justify-between relative border-b border-white border-opacity-5 z-10'
     >
       {/* left side - menu, nav, logo */}
       <div className='flex items-center gap-2'>

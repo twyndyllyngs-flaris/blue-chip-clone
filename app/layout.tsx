@@ -61,12 +61,12 @@ export default function RootLayout ({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-theme-primary`}
       >
-        <header className='fixed top-0 w-full'>
+        <header className='fixed top-0 w-full z-10'>
           <Navbar />
           <SearchDrawer></SearchDrawer>
         </header>
 
-        <main className='bg-gray-100 w-full h-fit pt-[64px]'>{children}</main>
+        <main className='w-full h-fit pt-[64px]'>{children}</main>
 
         <footer className='bg-theme-primary w-full h-[1500px] flex justify-center items-center'>
           footer

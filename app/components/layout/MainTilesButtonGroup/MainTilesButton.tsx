@@ -24,6 +24,7 @@ const MainTilesButton: React.FC<MainTilesButtonProps> = ({
       role='button'
       href={linkTo}
       passHref
+      aria-label={altText}
       className={`flex max-3xsm:flex-col max-3xsm:py-[5px] max-3xsm:px-[10px] flex-grow flex-shrink items-center justify-center h-[50px] lg:h-auto lg:py-[13px] lg:px-[20px] xl:py-[16px] my-0 mx-[5px] whitespace-nowrap 
       ${isButton ? 'bg-button-primary' : 'bg-transparent'} ${visibilityCSS} border border-solid border-[#ffffff1a] rounded-[10px] gap-[7px] lg:gap-[13px]  
       cursor-pointer transition-all duration-150 ease-in-out active:scale-95 active:opacity-80`} 

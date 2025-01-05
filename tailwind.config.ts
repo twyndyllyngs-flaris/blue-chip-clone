@@ -28,6 +28,25 @@ export default {
         '2xsm': '480px',
         '3xsm': '360px',
       },
+      scrollbar: {
+        hide: {
+          "scrollbar-width": "none",  // Hide the scrollbar
+        },
+      },
+      gridTemplateColumns: {
+        'auto-min': 'min-content',
+      },
+      keyframes: {
+        ping: {
+          '75%, 100%': {
+            transform: 'scale(1.8)', // Custom scale
+            opacity: '0',
+          },
+        },
+      },
+      animation: {
+        ping: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+      },
     },
   },
   plugins: [],
