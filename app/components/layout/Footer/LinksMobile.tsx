@@ -5,6 +5,7 @@ import BTCButton from './BTCButton'
 import Accordion from './Accordion'
 import Link from 'next/link'
 import Image from 'next/image'
+import BlueChipAppButton from './BlueChipAppButton'
 
 const LinksMobile = () => {
   return (
@@ -84,6 +85,19 @@ const LinksMobile = () => {
         <button className='bg-[#3555ff] h-[34px] py-[10px] px-[12px] flex items-center justify-center rounded-[10px]'>
           <p className='text-[13px] leading-[110%] uppercase'>Get Answers</p>
         </button>
+      </div>
+
+      <div className='flex justify-between w-full gap-[8px] 3xsm:gap-[15px]'>
+        <BlueChipAppButton
+          for='Android' // Passing the platform name
+          iconLink='/assets/android.svg' // Passing the icon link (could be a local path or URL)
+          alt='Android Icon' // Passing alt text for accessibility
+        />
+        <BlueChipAppButton
+          for='iOS' // Another example for iOS
+          iconLink='/assets/apple.svg'
+          alt='iOS Icon'
+        />
       </div>
     </div>
   )

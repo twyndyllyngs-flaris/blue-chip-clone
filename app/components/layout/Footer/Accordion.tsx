@@ -29,7 +29,7 @@ const Accordion = () => {
       content: [
         'About Us',
         'VIP',
-        'Awards & Certificates',
+        'Certificates',
         'Promotions',
         'Help Center',
         'App'
