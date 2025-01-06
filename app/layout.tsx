@@ -6,6 +6,8 @@ import './globals.css'
 import Navbar from './components/layout/Navbar/Navbar'
 import SearchDrawer from './components/layout/Navbar/SearchDrawer'
 import LinksMobile from './components/layout/Footer/LinksMobile'
+import FooterAbout from './components/layout/Footer/FooterAbout'
+import LinksDesktop from './components/layout/Footer/LinksDesktop'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -60,7 +62,7 @@ export default function RootLayout ({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-theme-primary`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-theme-primary  overflow-x-hidden`}
       >
         <header className='fixed top-0 w-full z-10'>
           <Navbar />
@@ -69,8 +71,10 @@ export default function RootLayout ({
 
         <main className='w-full h-fit pt-[64px]'>{children}</main>
 
-        <footer className='bg-theme-primary w-full h-full'>
+        <footer className='bg-theme-primary w-full'>
+          <LinksDesktop />
           <LinksMobile />
+          <FooterAbout />
         </footer>
       </body>
     </html>

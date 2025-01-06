@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes scroll-left { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } } .animate-scroll-left { animation: scroll-left 35s linear infinite; }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -55,6 +57,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 *{

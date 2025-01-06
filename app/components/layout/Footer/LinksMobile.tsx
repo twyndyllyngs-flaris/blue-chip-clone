@@ -6,10 +6,12 @@ import Accordion from './Accordion'
 import Link from 'next/link'
 import Image from 'next/image'
 import BlueChipAppButton from './BlueChipAppButton'
+import PaymentCarousel from './PaymentCarousel'
+
 
 const LinksMobile = () => {
   return (
-    <div className='w-full flex flex-col items-center pt-[40px] px-[15px] pb-0 bg-[#12294a]'>
+    <div className='md:hidden w-full flex flex-col items-center pt-[40px] px-[15px] pb-0 bg-[#12294a]'>
       <BTCButton />
       <Accordion />
 
@@ -87,7 +89,8 @@ const LinksMobile = () => {
         </button>
       </div>
 
-      <div className='flex justify-between w-full gap-[8px] 3xsm:gap-[15px]'>
+      {/* blue chip buttons */}
+      <div className='flex justify-between w-full gap-[8px] 3xsm:gap-[15px] mb-[20px]'>
         <BlueChipAppButton
           for='Android' // Passing the platform name
           iconLink='/assets/android.svg' // Passing the icon link (could be a local path or URL)
@@ -99,6 +102,8 @@ const LinksMobile = () => {
           alt='iOS Icon'
         />
       </div>
+
+      <PaymentCarousel />
     </div>
   )
 }
