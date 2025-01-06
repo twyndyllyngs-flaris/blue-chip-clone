@@ -18,7 +18,6 @@ export default async function Home () {
 
   const { providers } = await fetchProviders()
   const providerCards: ProviderCardData[] = providers || []
-  console.log(gameCards, providerCards)
 
   return (
     <div className='bg-theme-primary w-full'>
