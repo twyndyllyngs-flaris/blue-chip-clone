@@ -6,8 +6,6 @@ import Accordion from './Accordion'
 import Link from 'next/link'
 import Image from 'next/image'
 import BlueChipAppButton from './BlueChipAppButton'
-import PaymentCarousel from './PaymentCarousel'
-
 
 const LinksMobile = () => {
   return (
@@ -103,7 +101,7 @@ const LinksMobile = () => {
         />
       </div>
 
-      <PaymentCarousel />
+      
     </div>
   )
 }

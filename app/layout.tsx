@@ -8,6 +8,7 @@ import SearchDrawer from './components/layout/Navbar/SearchDrawer'
 import LinksMobile from './components/layout/Footer/LinksMobile'
 import FooterAbout from './components/layout/Footer/FooterAbout'
 import LinksDesktop from './components/layout/Footer/LinksDesktop'
+import PaymentCarousel from './components/layout/Footer/PaymentCarousel'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -74,6 +75,7 @@ export default function RootLayout ({
         <footer className='bg-theme-primary w-full'>
           <LinksDesktop />
           <LinksMobile />
+          <PaymentCarousel />
           <FooterAbout />
         </footer>
       </body>
