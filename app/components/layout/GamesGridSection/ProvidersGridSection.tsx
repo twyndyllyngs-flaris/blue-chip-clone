@@ -80,7 +80,7 @@ const ProvidersGridSection: React.FC<ProviderGridSectionProps> = ({
                     >
                       <Image
                         src={'https://ap-south-1.graphassets.com/cm5go70wv029u08o0f4t7di6a/cm5jqww8q1dup07o9q1tyme9e'}
-                        alt={' image'}
+                        alt={providerCard.providerName + ' logo'}
                         layout='responsive'
                         unoptimized={true} // Disable optimization for SVG
                         width={93} // provide width for the aspect ratio calculation
