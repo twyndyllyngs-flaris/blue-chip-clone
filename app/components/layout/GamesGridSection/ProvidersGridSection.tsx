@@ -15,7 +15,7 @@ const ProvidersGridSection: React.FC<ProviderGridSectionProps> = ({
   providerCards
 }) => {
   return (
-    <section className='flex flex-col flex-shrink-0 mb-[35px] md:mb-[38px] lg:[48px]'>
+    <section className='flex flex-col flex-shrink-0 mb-[35px] md:mb-[38px] lg:mb-[48px]'>
       {/* Section and See All Container */}
       <div
         className='flex items-center justify-between w-full max-w-[1440px] mb-[20px] px-[15px]

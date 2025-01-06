@@ -62,7 +62,7 @@ const Accordion = () => {
   return (
     <div className='w-full'>
       {items.map((item, index) => (
-        <div key={item.id} className='px-4 bg-[#1a3157] rounded-xl mb-[20px]'>
+        <section key={item.id} className='px-4 bg-[#1a3157] rounded-xl mb-[20px]'>
           <button
             onClick={() => toggleAccordion(index)}
             className={`w-full text-left flex justify-between items-center py-[10px] border-b border-solid active:scale-[.99] active:opacity-80   
@@ -103,14 +103,13 @@ const Accordion = () => {
                   <li key={index}>
                     <Link href={'/'} passHref>
                       <p className='text-[#cad3e1]'>{links}</p>
-                      
                     </Link>
                   </li>
                 ))}
               </ul>
             </nav>
           </div>
-        </div>
+        </section>
       ))}
     </div>
   )

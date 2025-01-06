@@ -32,7 +32,9 @@ export default async function Home () {
         providerCards={providerCards}
       />
 
-      <GamesGridSection sectionName='All Games' gameCards={gameCards} />
+      <GamesGridSection sectionName='All Games' gameCards={gameCards} isLastChild={false} />
+
+      <GamesGridSection sectionName='Popular Games' gameCards={gameCards} isLastChild={true} />
     </div>
   )
 }

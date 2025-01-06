@@ -43,14 +43,14 @@ export default {
             opacity: '0',
           },
         },
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
       animation: {
         ping: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
-        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        scroll: 'scroll 20s linear infinite',
       },
     },
   },

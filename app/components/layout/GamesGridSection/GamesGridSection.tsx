@@ -8,14 +8,16 @@ import Image from 'next/image'
 interface GamesGridSectionProps {
   sectionName: string
   gameCards: GameCardData[] // GameCardData array type for the gameCards prop
+  isLastChild: boolean
 }
 
 const GamesGridSection: React.FC<GamesGridSectionProps> = ({
   sectionName,
-  gameCards
+  gameCards,
+  isLastChild
 }) => {
   return (
-    <section className='flex flex-col flex-shrink-0 mb-[70px] xl:mb-[100px] 2xl:mb-[180px]'>
+    <section className={`${!isLastChild && "bg-[url('/assets/bg-red.svg')] bg-cover bg-opacity-80 py-[48px]"} flex flex-col flex-shrink-0 ${isLastChild ? "mb-[70px] xl:mb-[100px] 2xl:mb-[180px]" : "mb-[35px] md:mb-[38px] lg:mb-[48px]"}`}> 
       {/* Section and See All Container */}
       <div
         className='flex items-center justify-between w-full max-w-[1440px] mb-[20px] px-[15px]
@@ -53,9 +55,10 @@ const GamesGridSection: React.FC<GamesGridSectionProps> = ({
         style={{ scrollbarWidth: 'none' }}
       >
         <div
-          className='grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] grid-flow-col gap-[12px] grid-rows-[1fr] w-max pr-[15px] 
+          className={`${!isLastChild && "drop-shadow-[0_16px_20px_rgba(83,10,12,0.58)]"} grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] grid-flow-col gap-[12px] grid-rows-[1fr] w-max pr-[15px] 
         md:grid-flow-row md:grid-cols-[repeat(8,112px)]
-        lg:grid-cols-[repeat(8,142px)] lg:pr-[30px] xl:gap-[16px] xl:pr-[40px] xl:grid-cols-[repeat(8,_156px)]'
+        lg:grid-cols-[repeat(8,142px)] lg:pr-[30px] xl:gap-[16px] xl:pr-[40px] xl:grid-cols-[repeat(8,_156px)]`}
+        
         >
           {Array(16)
             .fill(gameCards[0])
@@ -66,8 +69,8 @@ const GamesGridSection: React.FC<GamesGridSectionProps> = ({
                 href={'/'}
                 passHref
                 aria-label={gameCard.title + ' card'}
-                className='w-full transition-all duration-[.2s] ease-in-out active:scale-95 active:opacity-80 relative flex flex-col h-min rounded-[8px] cursor-pointer aspect-[1/1.35]
-      max-md:min-h-[160px] md:min-w-min lg:w-[112px] xl:w-[132px] 2xl:w-[156px] '
+                className={` w-full transition-all duration-[.2s] ease-in-out active:scale-95 active:opacity-80 relative flex flex-col h-min rounded-[8px] cursor-pointer aspect-[1/1.35]
+      max-md:min-h-[160px] md:min-w-min lg:w-[112px] xl:w-[132px] 2xl:w-[156px] `}
               >
                 <Image
                   src={gameCard.gamePoster.url}

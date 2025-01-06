@@ -10,6 +10,7 @@ import FooterAbout from './components/layout/Footer/FooterAbout'
 import LinksDesktop from './components/layout/Footer/LinksDesktop'
 import PaymentCarousel from './components/layout/Footer/PaymentCarousel'
 
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin']
@@ -71,6 +72,7 @@ export default function RootLayout ({
         </header>
 
         <main className='w-full h-fit pt-[64px]'>{children}</main>
+        
 
         <footer className='bg-theme-primary w-full'>
           <LinksDesktop />
