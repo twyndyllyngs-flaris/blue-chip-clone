@@ -5,6 +5,7 @@ import './globals.css'
 // components
 import Navbar from './components/layout/Navbar/Navbar'
 import SearchDrawer from './components/layout/Navbar/SearchDrawer'
+import LinksMobile from './components/layout/Footer/LinksMobile'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -68,8 +69,8 @@ export default function RootLayout ({
 
         <main className='w-full h-fit pt-[64px]'>{children}</main>
 
-        <footer className='bg-theme-primary w-full h-[1500px] flex justify-center items-center'>
-          footer
+        <footer className='bg-theme-primary w-full h-full'>
+          <LinksMobile />
         </footer>
       </body>
     </html>
