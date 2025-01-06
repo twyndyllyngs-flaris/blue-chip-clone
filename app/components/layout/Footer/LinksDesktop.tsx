@@ -120,7 +120,7 @@ const LinksDesktop = () => {
 
       {/* Links */}
       <nav className='flex gap-[15px] justify-around w-[60%] lg:flex-grow-[2] lg:w-auto'>
-        {Links.map((link, index) => (
+        {Links.map((link) => (
           <div key={link.id} className=''>
             <h3 className='text-white text-[15px] leading-[140%] font-medium mb-[20px]'>
               {link.title}

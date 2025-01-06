@@ -5,7 +5,6 @@ import Image from 'next/image'
 
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
-import Autoplay from 'embla-carousel-autoplay'
 
 const PaymentCarousel = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [AutoScroll()])
