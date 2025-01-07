@@ -26,11 +26,17 @@ const SearchDrawer: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isClient]);
 
+  useEffect(() => {
+    console.log(isVisible ? 'translate-y-[0px]' : '-translate-y-[50px]')
+  },[isVisible])
+
   if (!isClient) return null; // Prevent SSR mismatch
+
+
 
   return (
     <section
-      className={`bg-theme-secondary translate-y-0 md:-translate-y-[50px] absolute top-[60px] left-[0] right-[0] bottom-[-50px] w-full transition-all duration-[.3s] ${isVisible ? 'translate-y-[0px]' : '-translate-y-[50px]'}`}
+      className={`bg-theme-secondary md:-translate-y-[50px] translate-y-0 absolute top-[60px] left-[0] right-[0] bottom-[-50px] w-full transition-all duration-[.3s] ${isVisible ? 'translate-y-[0px]' : 'translate-y-[-50px]'}`}
       role='region'
       aria-labelledby='search-drawer-title'
     >
