@@ -37,9 +37,9 @@
 }
 
 @font-face {
-  font-family: 'Bluechip';
-  src: url('/fonts/bluechip.ttf') format('ttf');
-  font-weight: normal;
+  font-family: 'Jost';
+  src: url('/fonts/Jost-ExtraBold.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -74,9 +74,8 @@ html, body {
 }
 
 .embla {
-
   margin: auto;
-  --slide-height: 27rem;
+  /* --slide-height: 27rem; */
   /* --slide-spacing: 4rem; */
   --slide-size: 70%;
 }
@@ -96,16 +95,19 @@ html, body {
 }
 
 .embla__slide__img {
-  border-radius: 1.8rem;
-  display: block;
-  height: var(--slide-height);
-  width: 100%;
-  object-fit: cover;
+  /* border-radius: 1.8rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: var(--slide-height); */
+  /* width: 100%; */
+  /* object-fit: cover; */
 }
 .embla__controls {
   display: grid;
-  grid-template-columns: auto 1fr;
-  justify-content: space-between;
+  /* grid-template-columns: auto 1fr; */
+  /* justify-content: space-between; */
+  justify-content: center;
   gap: 1.2rem;
   margin-top: 1.8rem;
 }
@@ -145,7 +147,8 @@ html, body {
   height: 35%;
 }
 .embla__dots {
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
@@ -259,5 +262,3 @@ html, body {
   --admonition-warning-rgb-value: 255, 196, 9;
   --admonition-danger-rgb-value: 220, 38, 38;
 }
-
-

@@ -103,6 +103,13 @@ export default function RootLayout ({
           type='font/woff2'
           crossOrigin='anonymous'
         />
+        <link
+          rel='preload'
+          href='/fonts/Jost-ExtraBold.woff2'
+          as='font'
+          type='font/woff2'
+          crossOrigin='anonymous'
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-theme-primary  overflow-x-hidden`}

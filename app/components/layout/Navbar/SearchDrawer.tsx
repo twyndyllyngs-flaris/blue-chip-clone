@@ -3,7 +3,7 @@ import React from 'react'
 const SearchDrawer: React.FC = () => {
   return (
     <section
-      className='bg-theme-secondary translate-y-0 md:-translate-y-[50px] absolute top-[60px] left-[0] right-[0] bottom-[-50px] w-full transition-all duration-[.3s]'
+      className='hidden bg-theme-secondary translate-y-0 md:-translate-y-[50px] absolute top-[60px] left-[0] right-[0] bottom-[-50px] w-full transition-all duration-[.3s]'
       role="region" // This specifies a distinct section of content
       aria-labelledby="search-drawer-title" // For screen readers to recognize the purpose of the section
     >

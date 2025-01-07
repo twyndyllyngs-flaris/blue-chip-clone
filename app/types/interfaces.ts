@@ -20,4 +20,15 @@ export interface ProviderCardData {
     url: string
   }
 }
+
+export interface PromoCardData {
+  id: string
+  promoTitle: string;
+  badgeText: string;
+  buttonText: string;
+  promoDescription: string;
+  poster: {
+    url: string;
+  }
+}
   

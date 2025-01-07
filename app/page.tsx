@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchGameCards, fetchProviders } from './lib/hygraph/hygraph' // Adjust the path based on your file structure
+import { fetchGameCards, fetchProviders, fetchPromos } from './lib/hygraph/hygraph' // Adjust the path based on your file structure
 
 // components
 import MainTilesButtonGroup from './components/layout/MainTilesButtonGroup/MainTilesButtonGroup'
@@ -8,7 +8,7 @@ import ProvidersGridSection from './components/layout/GamesGridSection/Providers
 import MainPageCarousel from './components/layout/Carousel/MainPageCarousel'
 
 // interface
-import { GameCardData, ProviderCardData } from './types/interfaces'
+import { GameCardData, ProviderCardData, PromoCardData } from './types/interfaces'
 
 // Fetch data inside the server component
 export const revalidate = 86400 // revalidate after a day (86400 seconds)
@@ -20,10 +20,13 @@ export default async function Home () {
   const { providers } = await fetchProviders()
   const providerCards: ProviderCardData[] = providers || []
 
+  const { gamePromoCards } = await fetchPromos()
+  const promoCards: PromoCardData[] = gamePromoCards || []
+
   return (
     <div className='bg-theme-primary w-full'>
 
-      <MainPageCarousel />
+      <MainPageCarousel promoCards={promoCards}/>
 
       <MainTilesButtonGroup />
 
