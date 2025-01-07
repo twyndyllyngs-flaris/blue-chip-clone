@@ -110,9 +110,9 @@ const GamesGridSection: React.FC<GamesGridSectionProps> = ({
                       src='https://ap-south-1.graphassets.com/cm5go70wv029u08o0f4t7di6a/cm5jq0xgp1d5k07pmm5bcansm'
                       alt='Hot Tag'
                       layout='responsive'
-                      width={500} // Use the actual dimensions for the image
-                      height={500} // Use the actual dimensions for the image
-                      unoptimized={true} // Disable optimization for SVG
+                      width={500}
+                      height={500} 
+                      unoptimized={true} 
                       className='object-cover absolute inset-0 text-transparent'
                     />
                   </div>
@@ -124,9 +124,9 @@ const GamesGridSection: React.FC<GamesGridSectionProps> = ({
                       src='https://ap-south-1.graphassets.com/cm5go70wv029u08o0f4t7di6a/cm5jq1k6q1d3q07o9su57zxyj'
                       alt='Hot Tag'
                       layout='responsive'
-                      width={500} // Use the actual dimensions for the image
-                      height={500} // Use the actual dimensions for the image
-                      unoptimized={true} // Disable optimization for SVG
+                      width={500} 
+                      height={500}
+                      unoptimized={true} 
                       className='object-cover absolute inset-0 text-transparent'
                     />
                   </div>
@@ -139,12 +139,16 @@ const GamesGridSection: React.FC<GamesGridSectionProps> = ({
                   className='opacity-0 hover:opacity-100 rounded-[8px] w-full h-full absolute flex flex-col items-center justify-end box-border p-[24px] bg-[#111315cc]
                   transition-all duration-[.35s] ease-in-out'
                 >
-                  <div className='relative flex items-center justify-center w-[70px] h-[70px] my-auto mx-0 bg-[#ff0960] rounded-full cursor-pointer transition-all duration-[.3s] ease-in-out'>
-                    <span className='text-[200%] relative left-[5%]'>►</span>
-                    <div className='animate-ping absolute flex items-center justify-center w-[70px] h-[70px] my-auto mx-0 bg-[#ff0960] rounded-full cursor-pointer transition-all duration-[.3s] ease-in-out'></div>
+                  <div className='relative flex items-center justify-center w-[50px] h-[50px] xl:w-[70px] xl:h-[70px] my-auto mx-0 bg-[#ff0960] rounded-full cursor-pointer transition-all duration-[.3s] ease-in-out'>
+                    <span className='text-[150%] xl:text-[200%] relative left-[5%]'>►</span>
+                    <div className='animate-ping absolute flex items-center justify-center w-[50px] h-[50px] xl:w-[70px] xl:h-[70px] my-auto mx-0 bg-[#ff0960] rounded-full cursor-pointer transition-all duration-[.3s] ease-in-out'></div>
                   </div>
 
-                  <button className='flex items-center justify-center px-[18px] py-[8px] font-medium text-[13px] uppercase bg-[#90a2bd99] hover:bg-[#aab8ffaf] active:scale-95 active:opacity-80  rounded-[10px] cursor-pointer transition-all duration-[.3s] ease-in-out'>
+                  <button
+                    className='flex items-center justify-center font-medium uppercase bg-[#90a2bd99]
+                  hover:bg-[#aab8ffaf] active:scale-95 active:opacity-80  rounded-[10px] cursor-pointer transition-all duration-[.3s] ease-in-
+                  px-[10px] py-[4px] text-[10px] xl:px-[18px] xl:py-[8px] xl:text-[13px]'
+                  >
                     Demo
                   </button>
                 </div>
