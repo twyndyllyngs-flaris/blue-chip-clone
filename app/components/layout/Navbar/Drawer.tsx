@@ -43,9 +43,9 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
       aria-hidden={!isDrawerOpen}
     >
       {/* Section for Drawer Header */}
-      <header className='flex justify-between mb-[40px]' role='banner'>
+      <header className='flex justify-between mb-[40px] 3xsm:flex-col 3xsm:gap-8 3xsm:mb-[10px]' role='banner'>
         {/* Deposit button group */}
-        <div className='flex gap-[10px] items-center h-[40px]'>
+        <div className='flex gap-[10px] items-center h-[40px] 3xsm:flex-col 3xsm:h-auto 3xsm:items-start 3xsm:order-2'>
           <Link
             href={'/'}
             className='relative flex w-[110px] h-[40px] hover:opacity-80 transform transition-all duration-150 active:scale-95'
