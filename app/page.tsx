@@ -21,7 +21,7 @@ export default async function Home () {
   const providerCards: ProviderCardData[] = providers || []
 
   const { gamePromoCards } = await fetchPromos()
-  const promoCards: PromoCardData[] = gamePromoCards || []
+  const promoCards: PromoCardData[] = gamePromoCards || []  
 
   return (
     <div className='bg-theme-primary w-full'>
