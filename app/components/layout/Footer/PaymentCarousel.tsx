@@ -19,7 +19,7 @@ const PaymentCarousel = () => {
         {Array.from({ length: 20 }).map((_, index) => (
           <div
             key={index}
-            className='embla__slide relative flex flex-grow-0 flex-shrink-0 basis-auto mr-[15px] w-[75px] h-[47px]'
+            className='embla__slide max-w-[100px] relative flex flex-grow-0 flex-shrink-0 basis-auto mr-[15px] w-[75px] h-[47px]'
           >
             <Image
               src={'/assets/visa.svg'} // Use passed icon link

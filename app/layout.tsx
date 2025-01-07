@@ -37,14 +37,21 @@ export const metadata: Metadata = {
     url: 'https://blue-chip-clone.vercel.app',
     description:
       'Join Bluechip Online Casino and play 3150+ Games. Welcome Pack Up To 500%, The Fastest Withdrawals, Provably Fair, 24/7 Support, Multiple currencies',
-    images: [{ url: '/assets/bluechip-casino-logo-2.png' }]
+    type: 'website',
+    images: [
+      {
+        url: '/assets/bluechip-casino-logo-2.png',
+        width: 180,
+        height: 180,
+      },
+    ],
   },
   twitter: {
     card: 'summary',
     title: 'Bluechip Casino: Play for Real Money | Welcome Bonus Up To 500%',
     description:
       'Join Bluechip Online Casino and play 3150+ Games. Welcome Pack Up To 500%, The Fastest Withdrawals, Provably Fair, 24/7 Support, Multiple currencies',
-    images: '/assets/bluechip-casino-logo-2.png'
+    images: ['/assets/bluechip-casino-logo-2.png']
   }
 }
 
@@ -57,10 +64,7 @@ export default function RootLayout ({
     <html lang='en'>
       <head>
         <meta charSet='UTF-8' />
-        <meta
-          content='width=device-width, initial-scale=1.0, maximum-scale=1.0'
-          name='viewport'
-        />
+        <meta content='width=device-width, initial-scale=1.0' name='viewport' />
         <meta
           name='keywords'
           content='casino, games, online casino, betting, real money'

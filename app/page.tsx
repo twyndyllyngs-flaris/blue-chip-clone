@@ -5,6 +5,7 @@ import { fetchGameCards, fetchProviders } from './lib/hygraph/hygraph' // Adjust
 import MainTilesButtonGroup from './components/layout/MainTilesButtonGroup/MainTilesButtonGroup'
 import GamesGridSection from './components/layout/GamesGridSection/GamesGridSection'
 import ProvidersGridSection from './components/layout/GamesGridSection/ProvidersGridSection'
+import MainPageCarousel from './components/layout/Carousel/MainPageCarousel'
 
 // interface
 import { GameCardData, ProviderCardData } from './types/interfaces'
@@ -21,19 +22,27 @@ export default async function Home () {
 
   return (
     <div className='bg-theme-primary w-full'>
-      {/* section for carousel */}
-      <section className='pt-[50px] '></section>
+
+      <MainPageCarousel />
 
       <MainTilesButtonGroup />
+
+      <GamesGridSection
+        sectionName='All Games'
+        gameCards={gameCards}
+        isLastChild={false}
+      />
 
       <ProvidersGridSection
         sectionName='All Providers'
         providerCards={providerCards}
       />
 
-      <GamesGridSection sectionName='All Games' gameCards={gameCards} isLastChild={false} />
-
-      <GamesGridSection sectionName='Popular Games' gameCards={gameCards} isLastChild={true} />
+      <GamesGridSection
+        sectionName='Popular Games'
+        gameCards={gameCards}
+        isLastChild={true}
+      />
     </div>
   )
 }

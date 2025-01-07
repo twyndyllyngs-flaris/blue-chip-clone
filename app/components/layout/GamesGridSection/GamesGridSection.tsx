@@ -17,7 +17,16 @@ const GamesGridSection: React.FC<GamesGridSectionProps> = ({
   isLastChild
 }) => {
   return (
-    <section className={`${!isLastChild && "bg-[url('/assets/bg-red.svg')] bg-cover bg-opacity-80 py-[48px]"} flex flex-col flex-shrink-0 ${isLastChild ? "mb-[70px] xl:mb-[100px] 2xl:mb-[180px]" : "mb-[35px] md:mb-[38px] lg:mb-[48px]"}`}> 
+    <section
+      className={`${
+        !isLastChild &&
+        "bg-[url('/assets/bg-red.svg')] bg-cover bg-opacity-80 py-[48px]"
+      } flex flex-col flex-shrink-0 ${
+        isLastChild
+          ? 'mb-[70px] xl:mb-[100px] 2xl:mb-[180px]'
+          : 'mb-[35px] md:mb-[38px] lg:mb-[48px]'
+      }`}
+    >
       {/* Section and See All Container */}
       <div
         className='flex items-center justify-between w-full max-w-[1440px] mb-[20px] px-[15px]
@@ -25,9 +34,15 @@ const GamesGridSection: React.FC<GamesGridSectionProps> = ({
       >
         {/* Section Name */}
         <div className='flex gap-[7px] items-center'>
-          <h2 className='text-[14px] uppercase font-medium leading-normal lg:text-[21px] lg:tracking-normal lg:capitalize xl:text-[24px] 2xl:text-[32px]'>
-            {sectionName}
-          </h2>
+          {isLastChild ? (
+            <h2 className='text-[14px] uppercase font-medium leading-normal lg:text-[21px] lg:tracking-normal lg:capitalize xl:text-[24px] 2xl:text-[32px]'>
+              {sectionName}
+            </h2>
+          ) : (
+            <h1 className='text-[14px] uppercase font-medium leading-normal lg:text-[21px] lg:tracking-normal lg:capitalize xl:text-[24px] 2xl:text-[32px]'>
+              {sectionName}
+            </h1>
+          )}
         </div>
 
         {/* See All Button */}
@@ -55,10 +70,11 @@ const GamesGridSection: React.FC<GamesGridSectionProps> = ({
         style={{ scrollbarWidth: 'none' }}
       >
         <div
-          className={`${!isLastChild && "drop-shadow-[0_16px_20px_rgba(83,10,12,0.58)]"} grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] grid-flow-col gap-[12px] grid-rows-[1fr] w-max pr-[15px] 
+          className={`${
+            !isLastChild && 'drop-shadow-[0_16px_20px_rgba(83,10,12,0.58)]'
+          } grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] grid-flow-col gap-[12px] grid-rows-[1fr] w-max pr-[15px] 
         md:grid-flow-row md:grid-cols-[repeat(8,112px)]
         lg:grid-cols-[repeat(8,142px)] lg:pr-[30px] xl:gap-[16px] xl:pr-[40px] xl:grid-cols-[repeat(8,_156px)]`}
-        
         >
           {Array(16)
             .fill(gameCards[0])
