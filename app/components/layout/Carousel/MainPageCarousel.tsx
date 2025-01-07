@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { PromoCardData } from '@/types/interfaces'
 
-// components
+// embla
 import useEmblaCarousel from 'embla-carousel-react'
 
 import {
@@ -57,6 +57,14 @@ const MainPageCarousel: React.FC<PromoCarouselProps> = ({ promoCards }) => {
     console.log(emblaApi)
     tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
   }, [])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      emblaApi?.scrollNext(); // Scroll to the next item
+    }, 5000); 
+
+    return () => clearInterval(interval); // Clean up the interval on unmount
+  }, [emblaApi]);
 
   const tweenScale = useCallback(
     (emblaApi: EmblaCarouselType, eventName?: EmblaEventType) => {
