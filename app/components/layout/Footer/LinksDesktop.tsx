@@ -141,8 +141,8 @@ const LinksDesktop = () => {
       </nav>
 
       {/* blue chip app buttons group */}
-      <div className='md:flex md:w-full lg:block lg:w-auto mr-[40px]'>
-        <div className='flex justify-end w-[60%] mt-[20px] ml-auto mr-[20px] md:flex-grow-[2] md:w-auto md:ml-[0] md:pr-0 lg:w-auto lg:m-0 lg:p-0'>
+      <div className='md:flex md:w-full lg:block lg:w-auto mr-[40px] md:max-lg:mr-0'>
+        <div className='flex justify-end w-[60%] mt-[20px] ml-auto mr-[20px] md:max-lg:mr-0 md:flex-grow-[2] md:w-auto md:ml-[0] md:pr-0 lg:w-auto lg:m-0 lg:p-0'>
           <div className='flex justify-between w-full  md:mb-0 lg:flex-wrap lg:w-[160px]'>
             <div
               role='button'
