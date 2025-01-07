@@ -43,12 +43,12 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
       aria-hidden={!isDrawerOpen}
     >
       {/* Section for Drawer Header */}
-      <header className='flex justify-between mb-[40px] 3xsm:flex-col 3xsm:gap-8 3xsm:mb-[10px]' role='banner'>
+      <header className='flex justify-between flex-col gap-8 mb-[10px] 3xsm:mb-[40px] 3xsm:flex-row 3xsm:gap-0' role='banner'>
         {/* Deposit button group */}
-        <div className='flex gap-[10px] items-center h-[40px] 3xsm:flex-col 3xsm:h-auto 3xsm:items-start 3xsm:order-2'>
+        <div className='flex gap-[10px] flex-col h-auto items-start max-3xsm:order-2 3xsm:flex-row 3xsm:h-[40px] 3xsm:items-center'>
           <Link
             href={'/'}
-            className='relative flex w-[110px] h-[40px] hover:opacity-80 transform transition-all duration-150 active:scale-95'
+            className='relative flex w-full h-[50px] 3xsm:w-[110px] 3xsm:h-[40px]  hover:opacity-80 transform transition-all duration-150 active:scale-95'
             aria-label='Navigate to home'
           >
             <Image
@@ -56,12 +56,12 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
               alt='promo button'
               layout='fill'
               objectFit='cover'
-              className='absolute inset-0 text-transparent'
+              className='absolute inset-0 text-transparent rounded-lg'
             />
           </Link>
           <Link
             href={'/'}
-            className='relative flex w-[110px] h-[40px] hover:opacity-80 transform transition-all duration-150 active:scale-95'
+            className='relative flex w-full h-[50px] 3xsm:w-[110px] 3xsm:h-[40px] hover:opacity-80 transform transition-all duration-150 active:scale-95'
             aria-label='Deposit promotion'
           >
             <Image
@@ -69,7 +69,7 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
               alt='deposit button'
               layout='fill'
               objectFit='cover'
-              className='absolute inset-0 text-transparent'
+              className='absolute inset-0 text-transparent rounded-lg'
             />
           </Link>
         </div>
@@ -77,7 +77,7 @@ const Drawer: React.FC<DrawerProps> = ({ closeDrawer, isDrawerOpen }) => {
         {/* Close button */}
         <button
           onClick={closeDrawer}
-          className='hover:scale-[110%] hover:opacity-80 transform transition-all duration-150 active:scale-95'
+          className='hover:scale-[110%] hover:opacity-80 transform transition-all duration-150 active:scale-95 flex justify-end 2xsm:inline'
           aria-label='Close drawer'
         >
           <svg

@@ -26,13 +26,7 @@ const SearchDrawer: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isClient]);
 
-  useEffect(() => {
-    console.log(isVisible ? 'translate-y-[0px]' : '-translate-y-[50px]')
-  },[isVisible])
-
   if (!isClient) return null; // Prevent SSR mismatch
-
-
 
   return (
     <section
