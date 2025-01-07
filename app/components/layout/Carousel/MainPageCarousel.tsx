@@ -54,7 +54,6 @@ const MainPageCarousel: React.FC<PromoCarouselProps> = ({ promoCards }) => {
   }, [])
 
   const setTweenFactor = useCallback((emblaApi: EmblaCarouselType) => {
-    console.log(emblaApi)
     tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
   }, [])
 
@@ -106,10 +105,6 @@ const MainPageCarousel: React.FC<PromoCarouselProps> = ({ promoCards }) => {
     },
     []
   )
-
-  useEffect(()=>{
-    console.log(scrollSnaps)
-  },[])
 
   useEffect(() => {
     if (!emblaApi) return
