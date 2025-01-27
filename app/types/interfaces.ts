@@ -1,15 +1,17 @@
-export interface GameCardData {
-    id: string
-    isDiscounted: boolean
-    isHot: boolean
-    hasDemo: boolean
-    title: string
-    gamePoster: {
-      url: string
-    }
-    providerName: {
-      providerName: string
-    }
+export interface Card {
+  imgUrl: string
+  provider: string
+  isHot: boolean
+  isNew: boolean
+  isDiscounted: boolean
+  isLive: boolean
+  hasDemo: boolean
+}
+
+export interface Provider {
+  imgUrl : string,
+  name: string,
+  numberOfGames: number,
 }
 
 export interface ProviderCardData {

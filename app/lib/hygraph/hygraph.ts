@@ -3,7 +3,7 @@ import { GraphQLClient } from 'graphql-request'
 const HYGRAPH_API = process.env.HYGRAPH_API as string // Make sure this is set in your .env.local
 const HYGRAPH_TOKEN = process.env.HYGRAPH_TOKEN as string // Optional: if you have private API access
 
-import { GameCardData, ProviderCardData, PromoCardData } from '@/types/interfaces'
+import { Card, ProviderCardData, PromoCardData } from '@/types/interfaces'
 
 export const hygraph = new GraphQLClient(HYGRAPH_API, {
   headers: {
@@ -13,7 +13,7 @@ export const hygraph = new GraphQLClient(HYGRAPH_API, {
 
 // Fetch Game Cards Data
 type GameCardsResponse = {
-  gamesCards: GameCardData[]
+  gamesCards: Card[]
 }
 
 async function fetchGameCards (): Promise<GameCardsResponse> {

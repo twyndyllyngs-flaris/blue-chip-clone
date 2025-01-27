@@ -46,13 +46,13 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: 'summary',
-    title: 'Bluechip Casino: Play for Real Money | Welcome Bonus Up To 500%',
-    description:
-      'Join Bluechip Online Casino and play 3150+ Games. Welcome Pack Up To 500%, The Fastest Withdrawals, Provably Fair, 24/7 Support, Multiple currencies',
-    images: ['/assets/bluechip-casino-logo-2.png']
-  }
+  // twitter: {
+  //   card: 'summary',
+  //   title: 'Bluechip Casino: Play for Real Money | Welcome Bonus Up To 500%',
+  //   description:
+  //     'Join Bluechip Online Casino and play 3150+ Games. Welcome Pack Up To 500%, The Fastest Withdrawals, Provably Fair, 24/7 Support, Multiple currencies',
+  //   images: ['/assets/bluechip-casino-logo-2.png']
+  // }
 }
 
 export default function RootLayout ({

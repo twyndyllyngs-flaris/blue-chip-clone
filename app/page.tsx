@@ -1,5 +1,9 @@
 import React from 'react'
-import { fetchGameCards, fetchProviders, fetchPromos } from './lib/hygraph/hygraph' // Adjust the path based on your file structure
+import {
+  fetchGameCards,
+  fetchProviders,
+  fetchPromos
+} from './lib/hygraph/hygraph' // Adjust the path based on your file structure
 
 // components
 import MainTilesButtonGroup from './components/layout/MainTilesButtonGroup/MainTilesButtonGroup'
@@ -8,44 +12,163 @@ import ProvidersGridSection from './components/layout/GamesGridSection/Providers
 import MainPageCarousel from './components/layout/Carousel/MainPageCarousel'
 
 // interface
-import { GameCardData, ProviderCardData, PromoCardData } from './types/interfaces'
+import { PromoCardData } from './types/interfaces'
 
-// Fetch data inside the server component
-export const revalidate = 86400 // revalidate after a day (86400 seconds)
+// values/data
+import { Games } from './constants/Games'
+import { Sports } from './constants/Sports'
+import { Providers } from './constants/Providers'
+const CardsData = [
+  {
+    sectionName: 'Exclusive Games',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Top Games',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Popular',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Live Casino',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'New Games',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Recommended Games',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Crash Games',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Discount',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: true,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Instant Games',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Jackpot Games',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Buy Bonus',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Megaways',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Table Games',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'TV Games',
+    cards: Games,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 16
+  },
+  {
+    sectionName: 'Sports Bets',
+    cards: Sports,
+    isLastChild: false,
+    hasBackground: false,
+    numberOfCards: 8
+  },
+  {
+    sectionName: 'All Games',
+    cards: Games,
+    isLastChild: true,
+    hasBackground: false,
+    numberOfCards: 16
+  }
+]
 
 export default async function Home () {
-  const { gamesCards } = await fetchGameCards()
-  const gameCards: GameCardData[] = gamesCards || []
-
-  const { providers } = await fetchProviders()
-  const providerCards: ProviderCardData[] = providers || []
-
   const { gamePromoCards } = await fetchPromos()
-  const promoCards: PromoCardData[] = gamePromoCards || []  
+  const promoCards: PromoCardData[] = gamePromoCards || []
 
   return (
     <div className='bg-theme-primary w-full'>
-
-      <MainPageCarousel promoCards={promoCards}/>
+      <MainPageCarousel promoCards={promoCards} />
 
       <MainTilesButtonGroup />
 
-      <GamesGridSection
-        sectionName='All Games'
-        gameCards={gameCards}
-        isLastChild={false}
-      />
+      {CardsData.slice(0, 4).map((cardData, index) => (
+        <GamesGridSection
+          key={index}
+          sectionName={cardData.sectionName}
+          Cards={cardData.cards}
+          isLastChild={cardData.isLastChild}
+          hasBackground={cardData.hasBackground}
+          numberOfCards={cardData.numberOfCards}
+        />
+      ))}
 
       <ProvidersGridSection
         sectionName='All Providers'
-        providerCards={providerCards}
+        providerCards={Providers}
       />
 
-      <GamesGridSection
-        sectionName='Popular Games'
-        gameCards={gameCards}
-        isLastChild={true}
-      />
+      {CardsData.slice(4).map((cardData, index) => (
+        <GamesGridSection
+          key={index}
+          sectionName={cardData.sectionName}
+          Cards={cardData.cards}
+          isLastChild={cardData.isLastChild}
+          hasBackground={cardData.hasBackground}
+          numberOfCards={cardData.numberOfCards}
+        />
+      ))}
     </div>
   )
 }

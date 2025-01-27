@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ed1b2e;
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-1" d="M283.83,60.52h12.17v-12.17h12.17v-12.17h11.83V0h-36.17v12.17h-24.7V0h-36.17v36.17h11.83v12.17h12.17v12.17h12.17v12.17h24.7v-12.17ZM299.48,18.09V5.91h12.17v12.17h-12.17v12.17h-12.17v-12.17h12.17Z"/>
+      <path class="cls-2" d="M0,60.63v-9.49h9.49v-23.72H0v-4.74h4.74v-4.74h4.74v-4.74h9.49v37.96h9.49v9.49H0Z"/>
+      <path class="cls-2" d="M36.25,60.63v-4.74h-4.74V17.93h4.74v-4.74h28.47v4.74h4.74v37.96h-4.74v4.74h-28.47ZM59.97,51.14v-28.47h-18.98v28.47h18.98Z"/>
+      <path class="cls-2" d="M77.24,60.63v-4.74h-4.75V17.93h4.75v-4.74h28.47v4.74h4.74v37.96h-4.74v4.74h-28.47ZM100.97,51.14v-28.47h-18.98v28.47h18.98Z"/>
+      <path class="cls-2" d="M148.52,60.17v-18.97h-18.97v18.97h-9.48V12.76h9.48v18.97h18.97V12.76h9.48v47.42h-9.48Z"/>
+      <path class="cls-2" d="M161.04,60.17V12.76h33.19v4.74h4.74v18.97h-4.74v4.74h-23.71v18.97h-9.48ZM189.49,31.72v-9.48h-18.97v9.48h18.97Z"/>
+    </g>
+  </g>
+</svg>
