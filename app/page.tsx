@@ -11,13 +11,11 @@ import GamesGridSection from './components/layout/GamesGridSection/GamesGridSect
 import ProvidersGridSection from './components/layout/GamesGridSection/ProvidersGridSection'
 import MainPageCarousel from './components/layout/Carousel/MainPageCarousel'
 
-// interface
-import { PromoCardData } from './types/interfaces'
-
 // values/data
 import { Games } from './constants/Games'
 import { Sports } from './constants/Sports'
 import { Providers } from './constants/Providers'
+import { Promos } from './constants/Promos'
 const CardsData = [
   {
     sectionName: 'Exclusive Games',
@@ -134,12 +132,9 @@ const CardsData = [
 ]
 
 export default async function Home () {
-  const { gamePromoCards } = await fetchPromos()
-  const promoCards: PromoCardData[] = gamePromoCards || []
-
   return (
     <div className='bg-theme-primary w-full'>
-      <MainPageCarousel promoCards={promoCards} />
+      <MainPageCarousel PromoCard={Promos} />
 
       <MainTilesButtonGroup />
 

@@ -1,0 +1,26 @@
+<svg class="Slider-Item__Card-Background" fill="none" preserveAspectRatio="none"
+    viewBox="0 0 820 336" xmlns="http://www.w3.org/2000/svg" height="336" width="820">
+    <style>
+        @media (max-width: 768px) {
+            #slide_bg_wb-banner-tr1-0 {
+                x1: 100%;
+                x2: 0%;
+                y1: 100%;
+                y2: 0%;
+            }
+        }
+    </style>
+    <path
+        d="M819.265 311.286C819.667 324.815 808.81 336 795.275 336L24.725 336C11.1904 336 0.332948 324.815 0.735598 311.286L9.30698 23.2861C9.69303 10.315 20.3196 3.74182e-05 33.2964 3.82967e-05L786.704 8.92987e-05C799.681 9.01772e-05 810.307 10.315 810.693 23.2861L819.265 311.286Z"
+        fill="url(#slide_bg_wb-banner-tr1-0)"></path>
+    <path
+        d="M818.765 311.301C819.159 324.548 808.528 335.5 795.275 335.5L24.725 335.5C11.4724 335.5 0.841127 324.548 1.23535 311.301L9.80674 23.3009C10.1848 10.6001 20.5899 0.500037 33.2964 0.500038L786.704 0.500089C799.41 0.50009 809.815 10.6001 810.193 23.301L818.765 311.301Z"
+        stroke="white" stroke-opacity="0.1"></path>
+    <defs>
+        <linearGradient gradientUnits="userSpaceOnUse" id="slide_bg_wb-banner-tr1-0" x1="0%" x2="100%" y1="100%" y2="0%">
+            <stop stop-color="#147261" offset="0%" />
+            <stop stop-color="#1A5C4E" offset="50%" />
+            <stop stop-color="#082C25" offset="100%" />
+        </linearGradient>
+    </defs>
+</svg>

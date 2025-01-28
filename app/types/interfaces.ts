@@ -9,28 +9,25 @@ export interface Card {
 }
 
 export interface Provider {
-  imgUrl : string,
-  name: string,
-  numberOfGames: number,
+  imgUrl: string
+  name: string
+  numberOfGames: number
 }
 
 export interface ProviderCardData {
   id: string
-  providerName: string;
-  numberOfGames: number;
+  providerName: string
+  numberOfGames: number
   providerLogo: {
     url: string
   }
 }
 
-export interface PromoCardData {
-  id: string
-  promoTitle: string;
-  badgeText: string;
-  buttonText: string;
-  promoDescription: string;
-  poster: {
-    url: string;
-  }
+export interface PromoCard {
+  imgUrl: string
+  bgUrl: string
+  promoTitle: string
+  badgeText: string
+  buttonText: string
+  promoDescription: string
 }
-  
