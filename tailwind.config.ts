@@ -47,10 +47,15 @@ export default {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
         },
+        pulse: {
+          '0%': { transform: 'scale(1)', opacity: '1' },
+          '100%': { transform: 'scale(0)', opacity: '0' },
+        },
       },
       animation: {
         ping: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
         scroll: 'scroll 20s linear infinite',
+        pulse: 'pulse .8s ease-in-out infinite alternate',
       },
     },
   },

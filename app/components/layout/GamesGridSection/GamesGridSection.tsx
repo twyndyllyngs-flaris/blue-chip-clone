@@ -124,6 +124,20 @@ const GamesGridSection: React.FC<GamesGridSectionProps> = ({
                 </div>
               )}
 
+              {/* hot tag or new tag */}
+              {card.isLive && (
+                <div className='tracking-normal rounded-[3px] bg-[#ff0960] leading-[130%] text-[10px] text-white py-[1px] pr-[3px] pl-[11px] left-[5px] top-[5px] absolute
+                before:absolute before:top-[calc(50%-3px)] before:left-[3px] before:w-[4px] before:h-[4px] before:bg-white before:rounded-[50%] before:content-[""] 
+                before:animate-pulse'>
+                  {/* <div className='absolute bg-white rounded-full w-[3px] h-[3px]'>
+
+                  </div> */}
+                  <span className=''>
+                    LIVE
+                  </span>
+                </div>
+              )}
+
               {card.isDiscounted && (
                 <div className='absolute top-[7%] right-[-2px] z-[1] transition-all duration-[.3s] ease-in-out 2xl:right-[-3px]'>
                   <div className='w-[36px] h-[21px] relative'>
