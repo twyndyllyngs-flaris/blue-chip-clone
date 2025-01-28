@@ -2,12 +2,34 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+// values
+const licenses = [
+  {
+    url: '/assets/licenses/begamble.svg'
+  },
+  {
+    url: '/assets/licenses/gambleResponsibly.svg'
+  },
+  {
+    url: '/assets/licenses/gamtalk.svg'
+  },
+  {
+    url: '/assets/licenses/guru.svg'
+  },
+  {
+    url: '/assets/licenses/tfg.svg'
+  },
+  {
+    url: '/assets/licenses/askgamblers.svg'
+  }
+]
+
 const FooterAbout = () => {
   return (
     <div className='flex flex-col items-center pt-[40px] px-[46px] pb-[30] md:pt-[55px] md:px-[30px] md:pb-[30px] lg:pt-[55px] lg:px-[89px] xl:pt-[60px] xl:px-[120px] xl:pb-[40]'>
       <div className='flex flex-col flex-wrap items-center justify-center  border-b-[1] border-solid border-[#12294a]'>
         <div className='flex flex-wrap items-center justify-around gap-[10px] w-full mb-[40px] md:w-[80%] md:mb-0'>
-          {Array.from({ length: 6 }).map((_, index) => (
+          {licenses.map((_, index) => (
             <Link
               key={index}
               href={'/'}
@@ -15,8 +37,8 @@ const FooterAbout = () => {
               className='relative flex justify-center w-[110px] h-[30px] md:w-[140px] md:h-[44px]'
             >
               <Image
-                src={'/assets/begamble.svg'} // Use passed icon link
-                alt={'Begamble Icon'} // Use passed alt text
+                src={_.url} // Use passed icon link
+                alt={'License Icon'} // Use passed alt text
                 unoptimized={true} // Disable optimization for SVG
                 fill={true}
                 className='absolute h-full w-full left-0 right-0 bottom-0 top-0 text-transparent'

@@ -15,7 +15,7 @@ const PaymentCarousel = () => {
 
   return (
     <div
-      className='embla flex flex-nowrap justify-between py-[10px] md:py-[20px] px-[15px] overflow-x-scroll leading-[0] whitespace-nowrap text-center bg-[#1a3157] cursor-grab active:cursor-grabbing'
+      className='embla 2xl:!scale-[120%] flex flex-nowrap justify-between py-[10px] md:py-[20px] px-[15px] overflow-x-scroll leading-[0] whitespace-nowrap text-center bg-[#1a3157] cursor-grab active:cursor-grabbing'
       style={{ scrollbarWidth: 'none' }}
       ref={emblaRef}
     >
@@ -23,7 +23,7 @@ const PaymentCarousel = () => {
         {PaymentMethods.map((item, index) => (
           <div
             key={index}
-            className='embla__slide !opacity-100 max-w-[100px] relative flex flex-grow-0 flex-shrink-0 basis-auto mr-[15px] w-[75px] h-[47px]'
+            className='embla__slide !opacity-100 2xl:!scale-[120%] max-w-[100px] relative flex flex-grow-0 flex-shrink-0 basis-auto mr-[15px] w-[75px] h-[47px]'
           >
             <Image
               src={item.url} // Use passed icon link
