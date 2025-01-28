@@ -259,10 +259,10 @@ const MainPageCarousel: React.FC<PromoCarouselProps> = ({ PromoCard }) => {
       </div>
 
       <div className='embla__controls'>
-        <div className='embla__buttons'>
+        {/* <div className='embla__buttons'>
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
+        </div> */}
 
         <div className='embla__dots'>
           {scrollSnaps.map((_, index) => (
