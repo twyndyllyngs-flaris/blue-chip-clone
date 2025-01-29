@@ -8,7 +8,7 @@ import AutoScroll from 'embla-carousel-auto-scroll'
 
 // values/data
 import { PaymentMethods } from '@/constants/PaymentMethods'
-import { it } from 'node:test'
+
 
 const PaymentCarousel = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [AutoScroll()])

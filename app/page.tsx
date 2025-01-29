@@ -1,9 +1,4 @@
 import React from 'react'
-import {
-  fetchGameCards,
-  fetchProviders,
-  fetchPromos
-} from './lib/hygraph/hygraph' // Adjust the path based on your file structure
 
 // components
 import MainTilesButtonGroup from './components/layout/MainTilesButtonGroup/MainTilesButtonGroup'

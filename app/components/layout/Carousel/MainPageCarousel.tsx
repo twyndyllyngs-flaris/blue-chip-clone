@@ -15,8 +15,8 @@ import {
 import ClassNames from 'embla-carousel-class-names'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import {
-  NextButton,
-  PrevButton,
+  // NextButton,
+  // PrevButton,
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 
@@ -27,7 +27,6 @@ interface PromoCarouselProps {
 
 // constants
 const options: EmblaOptionsType = { loop: true }
-const slides: number[] = Array.from(Array(5).keys())
 const TWEEN_FACTOR_BASE = 0.1
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
@@ -38,10 +37,10 @@ const MainPageCarousel: React.FC<PromoCarouselProps> = ({ PromoCard }) => {
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi)
   const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick
+    // prevBtnDisabled,
+    // nextBtnDisabled,
+    // onPrevButtonClick,
+    // onNextButtonClick
   } = usePrevNextButtons(emblaApi)
 
   const tweenFactor = useRef(0)
